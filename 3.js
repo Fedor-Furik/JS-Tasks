@@ -43,7 +43,7 @@ for (let i; i < 6 ; i += 2) {
 
 let numbers = [42, 65, 49, 68, 56, 47, 70, 42, 51, 35, 58, 63, 40, 70]
 for(let i = 0; i < numbers.lenght; i++) {
-console.log(Index:i)   
+console.log(`Index: ${i}`)   
 console.log(numbers[i])
 }
 
