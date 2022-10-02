@@ -165,5 +165,5 @@ for (let i = 0; i < users.length; i++) {
 
 let vegetables = ["морковь","баклажан","репа","топинамбур"];
 for (let i = 0; i < vegetables.length; i++) {
-      console.log(`word: ${vegetables[i]}, lenght: ${vegetables[i].lenght}`)
+      console.log(`word: ${vegetables[i]}, lenght: ${vegetables[i].length}`)
 }
