@@ -32,10 +32,10 @@
 
 // 3 Создать массив из 5 элементов. Используя цикл for, вывести каждый второй элемент массива в консоль.
 
-//massiv = [1, 2, 3, 4, 5]
-//for (let i; i < 6 ; i+2) {
-//    console.log(massiv[0 + i])
-//}
+massiv = [1, 2, 3, 4, 5]
+for (let i; i < 6 ; i += 2) {
+    console.log(massiv[i])
+}
 
 // 4 Есть массив произвольных чисел: let numbers = [42, 65, 49, 68, 56, 47, 70, 42, 51, 35, 58, 63, 40, 70]
 // Вывести в консоль значения всех элементов массива и соответствующие им индексы в таком виде: Индексу 0 соответствует число 42 Индексу 1 соответствует число 65 и т.д.
@@ -95,10 +95,11 @@
 //console.log(sum)
 
 //4)
-
+  
+  let max = numbers[0]
 //for (let i = 0; i < numbers.length; i++) {
-//    if(numbers[i] > numbers[0]){
-//        numbers[0] = numbers[i];
+//    if(numbers[i] > max{
+//        max = numbers[i];
 //   }
 //
 //}
@@ -120,9 +121,9 @@
 
 //let arr = [5, 4, 3, -3, -10, -1, 8, -20, 0]
 //let newArr = []
-//for (let i = 0; i < arr.length; i ++) {
+//for (let i = 0; i < arr.length; i++) {
 //    if (arr[i] > 0 ) {
-//       newArr[newArr.length] = arr[i]
+//       newArr.push = arr[i]
 //    }
 //}
 //console.log(newArr)
@@ -133,9 +134,9 @@
 //let nums = [5, 4, 3, 8, 0]
 //let newnums = []
 //let limit = 5;
-//for (let i = 0; i < nums.length; i ++) {
+//for (let i = 0; i < nums.length; i++) {
 //        if (nums[i] >= limit) {
-//           newnums[newnums.length] = nums[i]
+//           newnums.push = nums[i]
 //        }
 //}
 //console.log(newnums)
