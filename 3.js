@@ -3,7 +3,7 @@
 
 //n = 50;
 
-//if (n < 100, n == 100, n > 0) {
+//if (n <= 100 && n > 0) {
 //   console.log('true')
 //} else {
 //  console.log('false')
