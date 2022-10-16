@@ -11,8 +11,8 @@ while (i < 3) {
 
 // 2 Перепишите код с использованием тернарного оператора
 let male = true;
-let gender;
-let male = true ? gender = 'men' : gender = 'woman'
+let gender = male === true ? 'man' : 'women';
+
 
 // 3 Задать массив логических значений (true/false). Например: const roles = [true, false, false, true, false]
 //Каждое значение обозначает админ (true) или пользователь (false).
@@ -28,11 +28,9 @@ let roli = [];
 for (let i = 0; i < roles.length; i++) {
     let obj = {};
     if (roles[i] == false) {
-        roli.push(obj)
-        roli[i].role = 'user'
+        roli.push({role:'user'});
     } else {
-       roli.push(obj)
-        roli[i].role = 'admin'
+       roli.push({role: 'admin'};
     }
 }
 console.log(roli)
@@ -86,8 +84,7 @@ findPositiveNumbers();
 
 //4)
 
-function findPositiveNumbers(a,b,c,d) {
-      arr = [a,b,c,d];
+function findPositiveNumbers(arr) {
       let retur = [];
       for (let i = 0;i < arr.length; i++) {
         if (arr[i] > 0) {
@@ -96,7 +93,7 @@ function findPositiveNumbers(a,b,c,d) {
     }
 }
 
-findPositiveNumbers(5,-4,3,-3);
+findPositiveNumbers(arr);
 
 // 5 Напишите функцию, которая принимает два параметра: значение и количество элементов. Функция создает новый массив и заполняет его этим значением в указанном количестве.
 //Например: из переданных значений ('a', 3) получаем массив ['a', 'a', 'a']
@@ -121,11 +118,11 @@ function filterFor(arr, a) {
     for (let i = 0; i < arr.lenght; i++) {
         if (arr[i] >= a) {
             arri.push(arr[i])
-       }
+        }
     }
-    console.log(arri)
+    return arri
 }
-filterFor(arr, 4)
+console.log(filterFor(arr, 4))
 
 // 7 Написать функцию вывода в консоль случайного цвета. Это будет строка вида "rgb(10,55,250)"
 //Здесь у вас будет две функции: одна ваша - getRandomRGB, а вторая - функция получения случайного числа в диапазоне min - max. Вот эта функция (просто скопируйте, она уже готова):
@@ -139,12 +136,9 @@ filterFor(arr, 4)
 function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
-let yv1 = getRandomInteger(0, 255)
-let yv2 = getRandomInteger(0, 255)
-let yv3 = getRandomInteger(0, 255)
 
 function getRandomRGB() {
-    console.log(`rgb( ${yv1},${yv2},${yv3})`)
+    console.log(`rgb( ${getRandomInteger(0, 255)},${getRandomInteger(0, 255)},${getRandomInteger(0, 255)})`)
 }
 
 
