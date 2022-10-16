@@ -166,8 +166,9 @@ for (let i = 0; i < users.length; i++) {
 //2) Пройтись по полученному массиву объектов и вывести в консоль строки вида "слово - длина_слова", например "картошка - 8"
 
 let vegetables = ["морковь", "баклажан", "репа", "топинамбур"];
-let vegapro = [{},{},{},{}];
+let vegapro = [];
 for (let i = 0; i < vegetables.length; i++) {
+    vegapro[i] = {};
     vegapro[i].word = vegetables[i];
     vegapro[i].lenght = vegetables[i].length;
 }
