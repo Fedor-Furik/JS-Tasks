@@ -139,6 +139,14 @@ filterFor(arr, 4)
 function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
+let yv1 = getRandomInteger(0, 255)
+let yv2 = getRandomInteger(0, 255)
+let yv3 = getRandomInteger(0, 255)
+
+function getRandomRGB() {
+    console.log(`rgb( ${yv1},${yv2},${yv3})`)
+}
+
 
 // 8 Написать функцию, которая выводит в консоль квадраты чисел из заданного диапазона (от min до max), где значения min и max передаются в функцию как параметры.
 //Примеры вызова такой функции:
