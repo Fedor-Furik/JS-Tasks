@@ -12,17 +12,13 @@ let c = prompt('введите число')
 let d = prompt('введите число')
 
 function slsh (a,b) {
-     a = Number(a)
-     e = typeof a
-     b = Number(b)
-     f = typeof b
-     if (e == "number" & f == "number") {
-       console.log(a + b)
-     } else if (e == "number" & f == "string") {
-        console.log("данные числа не являются числами")
-     } else if (e == "string" & f == "number") {
-      console.log("данные числа не являются числами")
-   }
+     if (a == "number" & b == "number") {
+         console.log(a + b)
+     } else if (a == "nan" || b == "nan") {
+        console.log("введите два параметра")
+     } else if (a == "string" || b == "string") {
+        console.log(" введенные данные не являются числами")
+     }
 }
 
 slsh(c,d)
@@ -39,8 +35,11 @@ slsh(c,d)
 // ПОСЛЕ: Uncaught Error: Функция "square" не может быть вызвана без аргумента
 
 function square(a) {
-
-  console.log(a * a)
+if (a = 'nan') {
+     console.log('Uncaught Error: Функция "square" не может быть вызвана без аргумента')
+} else {
+      console.log(a * a)
+}
 }
 
 square()
