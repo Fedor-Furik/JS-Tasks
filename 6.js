@@ -105,7 +105,8 @@ function verifyCats(catsJane,catsJulia) {
       catsJane.shift()
       arr = arr.concat(catsJane,catsJulia)
       arr.forEach(function(item,index){
-        console.log(`Кошка № ${index} ${function(item){return item >= 2 ? 'взрослая' : 'котенок'}}, ей ${item} лет`)
+          let status = function(item){return item >= 2 ? 'взрослая' : 'котенок'}
+          console.log(`Кошка № ${index + 1} ${status}}, ей ${item} лет`)
       })
       
 }
