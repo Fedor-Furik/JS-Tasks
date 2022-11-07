@@ -145,6 +145,7 @@ filterFor(arr, 5)
 //2: [1, 16, 12, 4, 5, 1, 3, 11, 7, 2]
 
 function getAverageHumanAge(catAges) {
+    let vzorsl = [];
     let vozrastofcat = catAges.reduce(function(acc,item){
     let vz = 0;
       if (item <= 2) {
@@ -152,11 +153,17 @@ function getAverageHumanAge(catAges) {
       } else {
         vz =  item * 7      
       }
-      console.log(vz)
+      if (vz >= 18) {
+        vzorsl.push(vz)
+      }
       acc++
 
-    }, 0)                                                                   
-    
+    }, 0)                                                                  
+    let sum = 0;
+      for (let i = 0; i < vzorsl.length; i++) { 
+            sum = sum + vzorsl[i]
+      }
+    console.log(sum / vzorsl.length)  
 }
 getAverageHumanAge([7 , 3, 2, 4, 1, 15, 8, 1, 9, 2])
 getAverageHumanAge([1, 16, 12, 4, 5, 1, 3, 11, 7, 2])
