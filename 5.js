@@ -85,8 +85,10 @@ filterFor([5, 4, 3, 8, 0],3)
 //Напишите функцию copyArr(arr), которая копирует массив, не изменяя оригинал. Используйте подходящий метод массива.
 
 function copyArr(arr) {
-    let clonofarr = arr.slice(0);
-    console.log(clonofarr)
+    let clonearr = arr.map(function (item) {
+        return [item]
+    })
+    console.log(clonearr)
 }
 
 copyArr([5, 4, 3, 8, 0])
