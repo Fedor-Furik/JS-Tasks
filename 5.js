@@ -53,8 +53,8 @@ square()
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
-let number = getRandomInteger(1,10)
 function quesnumber() {
+    let number = getRandomInteger(1,10)
     let vsh = prompt('введите число')
     if (vsh == number){
       console.log('Вы выиграли!')
@@ -71,16 +71,15 @@ quesnumber()
 //запуск функции filterFor(arr, 10) дает результат []
 //запуск функции filterFor(arr, 3.11) дает результат [4,5,8]
 
-let arr2 = [];
-function filterFor(arr,a) {
+unction filterFor(arr,a) {
   for (let i = 0; i < arr.length ; i++) {
      if (arr[i] >= a) {
-      arr2.push(arr[i]);
+      return arr[i]
      }
   }
-  console.log(arr2)
 }
 filterFor([5, 4, 3, 8, 0],3)
+
 
 //5)
 //Напишите функцию copyArr(arr), которая копирует массив, не изменяя оригинал. Используйте подходящий метод массива.
