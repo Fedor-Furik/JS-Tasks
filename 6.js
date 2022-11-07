@@ -70,18 +70,21 @@ for (let i = 0; i < stations.length; i++) {
 //console.log(unique(strings) ); должен вывести "кришна, харе, :-O"
 
 let strings = ["кришна", "кришна", "харе", "харе", "харе", "харе", "кришна", "кришна", ":-O"];
-function unique(arr) {
+function unique(strings) {
     let result = [];
-  
-   for (let i = 0; i < strings.length; i++ ) {
-      if (result)) {
-        result.push(str);
-      }
+    let i = 0
+    while (i < strings.length) {     
+        for (let q = 0; q < strings.length; q++ ) {     
+            if(strings[i] != strings[q]){
+                 result.push(strings[i])
+            }
+         }
+         i = i + 1
     }
-  
-    return result;
- }
-alert( unique(strings) )
+}
+
+console.log(unique(strings) )
+
 
 //6)
 //Женя и Юля изучают кошек. Каждая из них узнала у 10 владельцев кошек о возрасте их кошки и сохранила данные в массиве (по одному массиву для каждой девочки). На данный момент им просто интересно узнать, является ли кошка взрослой или котёнком.
