@@ -103,14 +103,19 @@ copyArr([5, 4, 3, 8, 0])
 //  d: 12,
 //}
 
-const objectWithNumbers = [10,20,'string',12]
+const objectWithNumbers = {
+    a: 10,
+    b: 20,
+    c: 'string',
+    d: 12,
+}
 let sum = 0;
 function sumObjectValues(arr) {
-  for (let i = 0;i < arr.length; i++) {
-      if (typeof arr[i] === "number") {
-        sum = sum + arr[i]
+  for (key in arr) {
+      if (typeof arr[key] === "number") {
+        sum = sum + arr[key]
       }
   }
   console.log(sum)
 }
-sumObjectValues([5,'num',10,2,'string'])
+sumObjectValues(objectWithNumbers)
