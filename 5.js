@@ -35,11 +35,11 @@ slsh(c,d)
 // ПОСЛЕ: Uncaught Error: Функция "square" не может быть вызвана без аргумента
 
 function square(a) {
-if (a = 'nan') {
-     console.log('Uncaught Error: Функция "square" не может быть вызвана без аргумента')
-} else {
-      console.log(a * a)
-}
+  if (square == 'nan') {
+    console.log(console.error)
+  } else {
+    console.log(a * a)
+  }
 }
 
 square()
