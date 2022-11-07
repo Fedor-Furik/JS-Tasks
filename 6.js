@@ -114,6 +114,7 @@ function verifyCats(catsJane,catsJulia) {
       
 }
 verifyCats([4, 5, 3, 11, 6, 2, 4, 1, 5, 9],[2, 4, 5, 1, 13, 2, 15, 8, 3, 7])
+verifyCats([3, 5, 9, 14, 1, 2, 6, 8, 3, 10],[8, 2, 10, 1, 2, 5, 6, 3, 1, 4])
 
 
 //7)
