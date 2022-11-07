@@ -12,21 +12,20 @@ ucFirst('Str')
 //Напишите функцию checkSpam(str), возвращающую true, если str содержит 'badWord' или 'XXX', а иначе false.
 //Функция должна быть нечувствительна к регистру.
 
-let e = prompt('введите слово');
-e = e.toLocaleLowerCase();
+let b = prompt('введите слово');
+a = b.toLocaleLowerCase();
 console.log(e)
-function checkSpam(str){
-    if (str == 'badword') {
+function checkSpam(e){
+    if (e.includes('badword') == true) {
         console.log(true)
-    } else if (str == 'xxx') {
-        console.log(true)
+    } else if (e.includes('xxx') == true) {
+        console.log(true)   
     } else {
         console.log(false)
     }
     
 }
-
-checkSpam(e)
+checkSpam(a)
 
 //3)
 //Написать функцию, которой на вход подается строка, на выход она дает символы наоборот (разворачивает строку). Пример: «привет Женя» -> «янеЖ тевирп»
