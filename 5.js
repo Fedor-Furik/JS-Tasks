@@ -8,20 +8,20 @@
 //wsum(1); // введите два параметра
 //sum(); // введите два параметра
 
-let c = prompt('введите число')
-let d = prompt('введите число')
+let c = '';
+let d = 5;
 
 function slsh (a,b) {
      if (a == "number" & b == "number") {
-         console.log(a + b)
-     } else if (a == "nan" || b == "nan") {
-        console.log("введите два параметра")
+       console.log(a + b)
+     } else if (a == "undefind" || b == "undefind") {
+      console.log("введите два параметра")
      } else if (a == "string" || b == "string") {
         console.log(" введенные данные не являются числами")
      }
 }
 
-slsh(c,d)
+slsh(typeof c,typeof d)
 
 //2)
 // Измените функцию "square" так, чтобы в случае ее вызова без аргумента генерировалась консольная ошибка (console.error):
@@ -35,7 +35,7 @@ slsh(c,d)
 // ПОСЛЕ: Uncaught Error: Функция "square" не может быть вызвана без аргумента
 
 function square(a) {
-  if (square == 'nan') {
+  if (a == 'undefind') {
     console.log(console.error)
   } else {
     console.log(a * a)
@@ -53,16 +53,15 @@ square()
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
-function quesnumber() {
+function quesnumber(vsh) {
     let number = getRandomInteger(1,10)
-    let vsh = prompt('введите число')
     if (vsh == number){
       console.log('Вы выиграли!')
     } else {
       console.log(`Вы не угадали, ваше число - ${vsh}, а выпало число ${number}`)
     }
 }
-quesnumber()
+quesnumber(4)
 
 //4)
 //Определить массив, например let arr = [5, 4, 3, 8, 0];
@@ -71,27 +70,26 @@ quesnumber()
 //запуск функции filterFor(arr, 10) дает результат []
 //запуск функции filterFor(arr, 3.11) дает результат [4,5,8]
 
-unction filterFor(arr,a) {
+function filterFor(arr,a) {
+  let newArr = [];
   for (let i = 0; i < arr.length ; i++) {
      if (arr[i] >= a) {
-      return arr[i]
+      newArr.push([i])
      }
   }
 }
 filterFor([5, 4, 3, 8, 0],3)
 
-
 //5)
 //Напишите функцию copyArr(arr), которая копирует массив, не изменяя оригинал. Используйте подходящий метод массива.
 
 function copyArr(arr) {
-    let clonearr = arr.map(function (item) {
-        return [item]
-    })
-    console.log(clonearr)
+    let cloneArr = arr.map(function (item) {
+        return item;
+   })
+    return cloneArr
 }
-
-copyArr([5, 4, 3, 8, 0])
+console.log(copyArr([5, 4, 3, 8, 0]))
 
 //6)
 //Создайте функцию sumObjectValues, которая будет суммировать все значения свойств, которые являются числами. Сумму чисел необходимо вернуть из функции.
@@ -109,9 +107,9 @@ const objectWithNumbers = {
     c: 'string',
     d: 12,
 }
-let sum = 0;
 function sumObjectValues(arr) {
-  for (key in arr) {
+  let sum = 0;
+  for (let key in arr) {
       if (typeof arr[key] === "number") {
         sum = sum + arr[key]
       }
