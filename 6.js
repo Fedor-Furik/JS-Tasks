@@ -73,15 +73,22 @@ let strings = ["кришна", "кришна", "харе", "харе", "харе
 function unique(strings) {
     let result = [];
     let i = 0
-    while (i < strings.length) {     
-        for (let q = 0; q < strings.length; q++ ) {     
-            if(strings[i] != strings[q]){
-                 result.push(strings[i])
-            }
-         }
-         i = i + 1
+    while (i < strings.length) {    
+          let noynik = ''; 
+          while (noynik == 'noyn') {
+                let s = 0
+                if (strings[i] != result[s]) {
+                     result.push(strings[i])
+                } else {
+                  noynik = 'noyn'
+                }
+                s++
+          }
     }
+        i = i + 1
+    console.log(result)
 }
+
 
 console.log(unique(strings) )
 
