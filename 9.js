@@ -24,6 +24,7 @@ form.addEventListener('submit', () => {
     let li = document.createElement('li')
     document.querySelector('ul').appendChild(li)
     li.innerText = input.value
+    document.form.reset()
 })
 
 //4)Калькулятор. 
@@ -35,8 +36,10 @@ form.addEventListener('submit', () => {
 
 const formy = document.querySelector('form')
 formy.addEventListener('sumbit', () => {
-let i1 = document.querySelector(".intp1");
-let i2 = document.querySelector(".intp2");
+let c1 = document.querySelector(".intp1");
+let c2 = document.querySelector(".intp2");
+let i1 = c1.value
+let i2 = c2.value
 let arif = select.value
 let p = document.createElement('p')
 
@@ -62,13 +65,15 @@ if (arif == '+') {
 //mouseleave на этой кнопке.
 
 function vz(min, max) {
+  for (let i = 0; i < 10; i = i + 0)
   return Math.floor(Math.random() * (max - min)) + min;
   }
-
-const button = document.querySelector('button')
-form.addEventListener('mouseenter', () => {
-         button.background-color(vz(0,255),vz(0,255),vz(0,255))       
-})
-form.addEventListener('mouseleave', () => {
-     button.rotate(vz(-180,180))
+button = document.querySelector('button')
+button.addEventListener('mouseenter', () => {
+        button.style.backgroundColor =  vz(0,255),vz(0,255),vz(0,255)
+})      
+button.addEventListener('mouseleave', () => {
+  let c = vz(-180,180)
+     button.style.transform = `rotate(${c}deg)`
+     document.querySelector('p').style.transform = `rotate(${c / 2}deg)`
 })
