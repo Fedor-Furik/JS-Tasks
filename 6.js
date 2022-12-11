@@ -70,27 +70,17 @@ for (let i = 0; i < stations.length; i++) {
 //console.log(unique(strings) ); должен вывести "кришна, харе, :-O"
 
 let strings = ["кришна", "кришна", "харе", "харе", "харе", "харе", "кришна", "кришна", ":-O"];
-function unique(strings) {
-    let result = [];
-    let i = 0
-    while (i < strings.length) {    
-          let noynik = ''; 
-          while (noynik == 'noyn') {
-                let s = 0
-                if (strings[i] != result[s]) {
-                     result.push(strings[i])
-                } else {
-                  noynik = 'noyn'
-                }
-                s++
-          }
+function unique(array) {
+    const newArray = [];
+    for (let i = 0; i < array.length; i++){
+      if (!(newArray.includes(array[i]))) {
+        newArray.push(array[i])
+      }
     }
-        i = i + 1
-    console.log(result)
+    return newArray
 }
 
-
-console.log(unique(strings) )
+console.log(unique(strings))
 
 
 //6)
