@@ -48,7 +48,6 @@ teg('red','prikol','hello')
 teg('grenn','smechno','bye')
 teg('blue','nemogy','Hi')
 
-
 //5)
 //Создать с помощью js абзац (тег p). Добавить в него контент. Добавить абзац с текстом на страницу.
 
@@ -61,10 +60,10 @@ document.body.appendChild(p)
 
 for(let i = 1960; i < 2022; i++) {
   let uuu = document.createElement('select')
-  document.body.appendChild(uuu)
   let option = document.createElement('option')
+  option.innerText = i;
   uuu.appendChild(option)
-  uuu.option.innerText = i;
+  document.body.appendChild(uuu)
 }
 
 //7)
@@ -120,18 +119,20 @@ let imen = [{
   order: true
   }];
   
+  
 let uuu = document.createElement('ul')
 document.body.appendChild(uuu)
 
-let li = document.createElement('li')
-
-for(let i = 0; i < imen.length; i++)
-if(imen[i].order = true) {
-uuu.appendChild(li)
-li.innerText = `${imen[i].name} оплатил(а) заказ`
-} else {
- uuu.appendChild(li)
- li.innerText = `${imen[i].name} отменил(а) заказ`
+for(let i = 0; i < imen.length; i++){
+  if(imen[i].order == true) {
+    let li = document.createElement('li')
+    li.innerText = `${imen[i].name} оплатил(а) заказ`
+    uuu.appendChild(li)
+   } else {
+    let li = document.createElement('li')
+    li.innerText = `${imen[i].name} отменил(а) заказ`
+    uuu.appendChild(li)
+   }
 }
 
 //8)
@@ -143,13 +144,15 @@ li.innerText = `${imen[i].name} оплатил(а) заказ`
 //c атрибутом href и текстом из массива) и добавить эту ссылку в созданный DIV из пунктаw
 //При нажатии на ссылки адреса должны открываться в новой вкладке (атрибут target="_blank")
 //ПОДСКАЗКА Для создания атрибута используется js метод setAttribute:
-//lement.setAttribute(name, value) - где name - сам атрибут, который нужно добавить, value - его значение.
+//element.setAttribute(name, value) - где name - сам атрибут, который нужно добавить, value - его значение.
 //Вкладывать ссылки в див нужно с помощью метода appendChild или append.
 //3) Добавить DIV из пункта 1 (со ссылками внутри ) в BOD 
 
-//div = document.createElement('div')
-//div.style.background = 'yellow'
-//document.body.appendChild(div)
+div = document.createElement('div')
+div.style.background = 'yellow'
+document.body.appendChild(div)
+
+let linksArr = ['https://www.onliner.by/', 'https://www.youtube.com/', 'https://vk.com/', 'https://www.google.com/', 'https://yandex.ru/'];
 
 for (let i = 0; i < linksArr.length; i++) {
   let a = document.createElement('a')
@@ -163,12 +166,11 @@ for (let i = 0; i < linksArr.length; i++) {
 //Добавить к нескольким тегам на странице класс "forRemove". Далее написать JS код, который найдет в HTML все элементы с классом "forRemove" и удалит их.
 //ПОДСКАЗКА Для удаления DOM-элементов можно использовать метод element.remove()
 
-let a = document.createElement('a')
-a.innerText = 'world'
-a.setAttribute('class','forRemove')
-document.body.appendChild(a)
+let m = document.querySelector('p')
+m.className ='forRemove'
+document.body.appendChild(m)
 
-element.remove(document.getElementsByClassName('forRemove'))
+m.remove()
 
 //10)
 //Создать массив объектов с полями name, age. Например:
@@ -186,3 +188,13 @@ const users = [
   {name: 'Olga', age: 30},
   {name:'Tom', age: 25}
   ]
+for (i = 0; i < users.length; i++) {
+  let table = document.querySelector('table')
+  let tr = document.createElement('tr')
+  tr.innerText = users[i].name
+  let td = document.createElement('td')
+  td.innerText = users[i].age
+  table.appendChild('tr')
+  table.appendChild('td')
+}
+
