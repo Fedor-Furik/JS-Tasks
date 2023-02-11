@@ -14,22 +14,24 @@ let alterObj = JSON.parse(ObjJson)
 let user = {}
 localStorage.user = 'sdd'
 let newUser = localStorage.user
-console.log(newUser)
+
 
 //2)Добавить в таск-мееджер кнопку, которая помечает все задачи как сделанные.
+//- Добавить тег button в html код и повесить на него обработчик события click
+//- В обработчике найти все существующие теги li при помощи функции document.querySelectorAll
+//- В цикле или с помощью forEach обойти найденные в пункте теги li. Каждому проставить li.style.textDecoration = 'line-through';
+//2) Добавить сохранение задач в таск-менеджер, чтобы они сохранялись между перезагрузками страницы.
+//Основное задание - сохранять сами задачи, без удаления и выделения как сделанные.
+//Сохранять удаление задач и статус выполнения - необязательно, т.к. это потребует значительной переработки кода.
 
-let number = document.querySelectorAll('li')
-console.log(number)
-document.getElementById('find_li').addEventListener('click',() => {
-    for(number in body){
-        li = document.querySelectorAll('li')
-        li.style.textDecoration = 'line-through';
-    }
+document.getElementById('find_li').addEventListener('click', () => {
+    let li = document.querySelectorAll('li')
+    li.forEach(element => {
+        element.style.textDecoration = 'line-through'
+    });
+    
 })
 
-//3)Разместить на странице несколько картинок.
-//При клике на любую картинку она плавно становится на бэкграунд всей страницы,
-//а тег картинки получает уникальные css-свойства (чтобы было понятно, что сейчас эта картинка является выбранным элементом). 
-//При перезагрузке страницы последнее выбранное состояние должно сохраниться, реализовать через LocalStorage.
+
 
 
